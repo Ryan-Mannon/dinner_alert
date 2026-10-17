@@ -11,7 +11,7 @@ def announce(room: str, message: str) -> None:
     timestamp = datetime.now().strftime("%H:%M:%S")
     print(f"[{timestamp}] {room}: {message}")
     if room == "Bedroom 1":
-        subprocess.run(["say", "Dinner is ready!"], check=True)
+        subprocess.run(["say", message], check=True)
 
 
 def notify_house(message: str) -> None:
